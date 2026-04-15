@@ -6,20 +6,24 @@
   body {
     font-family: helvetica, arial, sans-serif;
     margin: 25px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
   }
   
   main {
-    display:block;
-    height:175px;
-  }
-  
-  header {
-    border-bottom: 1px solid black;
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    max-width: 700px;
   }
   
   h1 {
     font-weight: bold;
-    color: #000;
+    color: #1e2835;
   }
   
   .bold {
@@ -36,7 +40,7 @@
   }
   
   footer {
-    padding-top: 25px;
+    padding-top: 2px;
     border-top: 1px solid black;
   }
   
@@ -47,36 +51,80 @@
   
   .pet-image {
     height:250px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
   }
   
   .dashboard div {
     display:block;
+    margin-bottom: 10px;
+    font-size: 16px;
   }
   
   .pet-image-container {
-    float:left;
-    padding:10px;
+    flex-shrink: 0;
   }
   
   .dashboard {
-    float:left;
-    padding:20px;
+    flex: 1;
+    padding: 0;
+  }
+  
+  /* Pet notification/comment bubble styling */
+  .pet-notification {
+    margin: 15px 0;
+    padding: 15px;
+    background-color: #ffe6e6;
+    border-left: 4px solid #ff6b6b;
+    border-radius: 5px;
+    font-style: italic;
+    color: #333;
+    font-weight: bold;
+    display: none;
+    min-height: 30px;
   }
   
   .button-container {
     margin-top:20px;
+    clear: both;
   }
   
   .button-container button {
     width: 100px;
-      margin-right: 10px;
-      text-align: center;
-      display: inline-block;
-      float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    text-align: center;
+    display: inline-block;
     font-size:15px;
     background-color: #1e2835;
     border-color: #404853;
+    border: 1px solid #404853;
     cursor:pointer;
     background-image: linear-gradient(to bottom,rgba(246,246,246,.1)0%,rgba(30,40,53,0)66%);
     color: #fafafa;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+
+  /* Hover effect for buttons */
+  .button-container button:hover {
+    background-color: #404853;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transform: translateY(-2px);
+  }
+
+  /* Active state when button is clicked */
+  .button-container button:active {
+    transform: translateY(0);
+  }
+
+  /* Specifically style the rest button */
+  .rest-button {
+    background-color: #2c5aa0;
+    border-color: #1a3a6b;
+  }
+
+  .rest-button:hover {
+    background-color: #1a3a6b;
   }
