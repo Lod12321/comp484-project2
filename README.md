@@ -1,5 +1,7 @@
 # Project GigaPet JavaScript
 
+Pages Link: https://lod12321.github.io/comp484-project2/
+
 ## Purpose
 This project builds the functionality and UI for a simple virtual Giga Pet game using JavaScript and jQuery.  
 It demonstrates understanding of:
